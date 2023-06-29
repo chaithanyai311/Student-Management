@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="top-bar">
+    <h1 class="title">
+      Add Student Detail
+    </h1>
+  </div>
+  <br>
+  <form (ngSubmit)="saveStudent()">
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Rollno :</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Enter the Rollno" [(ngModel)]="student.rollno" name="rollno">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Name :</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Enter the Name" [(ngModel)]="student.name" name="name">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <label class="label">Class :</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <div class="select">
+              <select [(ngModel)]="student.studentClass" name="studentClass">
+                <option>CSE</option>
+                <option>ISE</option>
+                <option>ME</option>
+                <option>ECE</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <label class="label">Gender :</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <div class="select">
+              <select [(ngModel)]="student.gender" name="gender">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Id Number :</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Enter the ID number" [(ngModel)]="student.studentid" name="studentid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Contact no :</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Enter the Contact no." [(ngModel)]="student.contact" name="contact">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link" type="submit">Save</button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light" type="reset">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>

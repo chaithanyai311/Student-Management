@@ -1,0 +1,70 @@
+<div class="centered-content">
+    <div class="model-box">
+        <h1 class="title has-text-centered">
+            Edit Student Details
+        </h1>
+
+        <div  *ngIf="selectedStudent" style="margin-left: 210px;">
+          <div class="row ">
+            <label>Roll No:</label>
+            <input [(ngModel)]="selectedStudent.rollno" name="rollno" type="number" required>
+          </div>
+          <div class="row">
+            <label>Name:</label>
+            <input [(ngModel)]="selectedStudent.name" name="name" type="text" required>
+          </div>
+          <div class="row" style="right: 40;">
+            <label>Class:</label>
+            <select [(ngModel)]="selectedStudent.studentClass" name="studentClass">
+              <option>CSE</option>
+              <option>ISE</option>
+              <option>ME</option>
+              <option>ECE</option>
+            </select>
+          </div>
+          <div class="row">
+            <label>Gender:</label>
+            <select [(ngModel)]="selectedStudent.gender" name="gender">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="row">
+            <label>Student ID:</label>
+            <input [(ngModel)]="selectedStudent.studentid" name="studentid" type="text" required>
+          </div>
+          <div class="row">
+            <label>Contact:</label>
+            <input [(ngModel)]="selectedStudent.contact" name="contact" type="text" required>
+          </div>
+          <button class="button is-link has-text-centered" style="padding: 2px 10px; margin-right: 210px;" (click)="updateStudent()">Update</button>
+          <button class="button is-link is-light" style="border-color: #5c9fec;" routerLink="/">Cancel</button>
+        </div>
+    <br>
+        <table>
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Gender</th>
+            <th>Student ID</th>
+            <th>Contact</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor="let student of studentList">
+            <td>{{ student.rollno }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.studentClass }}</td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.studentid }}</td>
+            <td>{{ student.contact }}</td>
+            <td>
+              <button class="button is-link" style="padding: 6px 20px;" (click)="selectStudent(student)">Edit</button>
+            </td>
+            <td>
+                <button class="button is-link is-light" style="border-color: #5c9fec;" routerLink="/">Cancel</button>
+            </td>
+          </tr>
+        </table>
+      </div>      
+    </div>

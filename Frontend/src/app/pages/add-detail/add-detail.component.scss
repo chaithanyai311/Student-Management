@@ -1,0 +1,24 @@
+@import '../../../main-styles.scss';
+.title{
+    font-family: 'Lato';
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $blue;
+}
+.button{
+    background-color: $blue; 
+    border-color: $blue;
+}
+
+.button:hover {
+    background-color:  $dark-blue; ;
+    border-color: $dark-blue;
+  }
+
+  .field-label.is-normal {
+    text-align: left;
+  }
+
+  .field-label {
+    text-align: left;
+  }

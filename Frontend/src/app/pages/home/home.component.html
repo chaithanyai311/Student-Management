@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<div class="centered-content">
+    <div class="home-container">
+        <div class="sidebar has-background-white">
+            <div class="top-bar">
+                <h1 class="title">
+                    Student Data
+                </h1>
+            </div>
+            <div class="list-menu">
+                <a class="list-menu-item" (click)="showAddDetail()" [class.is-active]="activeTab === 'add'" (click)="activeTab = 'add'">
+                    <p>Add Details</p>
+                </a>
+                <a class="list-menu-item" (click)="showViewDetail()" [class.is-active]="activeTab === 'view'" (click)="activeTab = 'view'">
+                    <p>View Details</p>
+                </a>
+            </div>
+        </div>
+        <div class="student-list-container has-background-light"> 
+            <ng-container *ngIf="activeTab !== 'add' && activeTab !== 'view'">
+                <p class="inactive-text">Select an option for desired operation.</p>
+              </ng-container>
+            <ng-container *ngIf="showAddDetailComponent">
+                <app-add-detail></app-add-detail>
+              </ng-container>
+              <ng-container *ngIf="showViewDetailComponent">
+                <app-view-detail></app-view-detail>
+              </ng-container>
+        </div>
+
+    </div>
+</div> 

@@ -1,0 +1,81 @@
+@import '../../../main-styles.scss';
+.title{
+    font-family: 'Lato';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $blue;
+    justify-content: center;
+}
+.home-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1150px;
+    max-height: 550px;
+    background: white;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: white;
+    padding: 42px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.student-list-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 42px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    .title{
+        margin: 0;
+    }
+    .top-bar {
+        display: flex;
+        .title {
+            flex-grow: 1;
+        }
+    }
+}
+
+.list-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    flex-grow: 1;
+
+    .list-menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border-radius: 5px;
+        width: 100%;
+        color: #5f5f5f;
+        margin-bottom: 15px;
+
+        &:hover {
+            background: rgb(233, 230, 230);
+        }
+
+        &.is-active {
+            background-color: $blue;
+            color: white;
+        }
+    }
+
+}
+
+.inactive-text {
+    font-size: 25px;
+    color: #777;
+    text-align: center;
+    margin-top: 30px;
+}
